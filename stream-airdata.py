@@ -28,7 +28,7 @@ def run():
     st.sidebar.image(image_office)
     st.title("Predicting Airport Terminal")
     if add_selectbox == 'Online':
-        Activity Period=st.number_input('Activity Period', min_value=0, max_value=201603, value=0)
+        Activity Period=st.number_input('Activity Period', min_value=0, max_value=201603, value=1)
         Passenger Count = st.number_input('Passenger Count',min_value=1, max_value=659837, value=1)
         Adjusted Passenger Count = st.number_input('Adjusted Passenger Count', min_value=1, max_value=659837, value=1)
         GEO Summary = st.selectbox('GEO Summary',['International','Domestic'])
