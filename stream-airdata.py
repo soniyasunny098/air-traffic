@@ -22,15 +22,15 @@ def run():
     st.sidebar.image(image_office)
     st.title("Predicting Airport Terminal")
     if add_selectbox == 'Online':
-        #Activity Period = st.number_input('Activity Period', min_value=200507, max_value=201603, value=200507)
-        Passenger Count = st.number_input('Passenger Count',min_value=1, max_value=659837, value=1)
-        Adjusted Passenger Count = st.number_input('Adjusted Passenger Count', min_value=1, max_value=659837, value=1)
+        Activity Period = st.number_input('Activity Period', min_value=200507, max_value=201603, value=200507)
         GEO Summary = st.selectbox('GEO Summary',['International','Domestic'])
         GEO Region = st.selectbox('GEO Region',[ 'US','Asia','Europe','Canada','Mexico','Other values'])
         Activity Type Code = st.selectbox('Activity Type Code', ['Deplaned', 'Enplaned','Thru/Transit'])
         Price Category Code = st.selectbox('Price Category Code', ['Low Fare', 'Other'])
         Boarding Area = st.selectbox('Boarding Area', ['A', 'B','C','F','G'])
+        Passenger Count = st.number_input('Passenger Count',min_value=1, max_value=659837, value=1)
         Adjusted Activity Type Code = st.selectbox('Adjusted Activity Type Code', ['Deplaned', 'Enplaned','Thru/Transit*2'])
+        Adjusted Passenger Count = st.number_input('Adjusted Passenger Count', min_value=1, max_value=659837, value=1)
         Year = st.selectbox('Year',[2005,2016])
         Month = st.selectbox('Month',['January','July','August','September','October'])
         output=""
