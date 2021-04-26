@@ -23,7 +23,7 @@ def run():
     st.sidebar.image(image_office)
     st.title("Predicting Airport Terminal")
     if add_selectbox == 'Online':
-        Activity Period = st.number_input('Activity Period', min_value=200507, max_value=201603, value=200507)
+        Activity Period = st.number_input('Activity Period', min_value=0, max_value=201603, value=1)
         Passenger Count = st.number_input('Passenger Count',min_value=1, max_value=659837, value=1)
         Adjusted Passenger Count = st.number_input('Adjusted Passenger Count', min_value=1, max_value=659837, value=1)
         GEO Summary = st.selectbox('GEO Summary',['International','Domestic'])
@@ -34,6 +34,7 @@ def run():
         Adjusted Activity Type Code = st.selectbox('Adjusted Activity Type Code', ['Deplaned', 'Enplaned','Thru/Transit*2'])
         Year = st.selectbox('Year',[2005,2016])
         Month = st.selectbox('Month',['January','July','August','September','October'])
+        
         output=""
         input_dict={'Activity Period':Activity Period,'Passenger Count':Passenger Count,'Adjusted Passenger Count':Adjusted Passenger Count,'GEO Summary':GEO Summary,'GEO Region': GEO Region,'Activity Type Code':Activity Type Code,'Price Category Code' : Price Category Code,'Boarding Area':Boarding Area,'Adjusted Activity Type Code':Adjusted Activity Type Code,'Year':Year,'Month':Month}
         input_df = pd.DataFrame([input_dict])
